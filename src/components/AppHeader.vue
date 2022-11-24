@@ -41,6 +41,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding:20px;
+    img{
+      height: 70px;
+    }
     .main-nav {
         ul {
             display: flex;
@@ -51,6 +55,7 @@ header {
                 padding: 15px 25px;
                 text-decoration: none;
                 color: #000;
+                font-size: 13px;
                 &.active {
                     background-color: var(--secondary-color);
                 }
