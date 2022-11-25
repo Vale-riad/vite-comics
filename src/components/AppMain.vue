@@ -1,43 +1,55 @@
 <script>
-import MainLogo from './MainLogo.vue';
+import MainLogo from "./MainLogo.vue";
+import SectionCard from "./SectionCard.vue";
 export default {
-  name: 'AppMain',
+  name: "AppMain",
   components: {
-    MainLogo
+    MainLogo,
+    SectionCard,
   },
-}
+};
 </script>
 
 <template>
   <main>
+    <div class="hero"></div>
     <div class="background-color">
-        <h1 class="container">Content goes here</h1>
+      <h1 class="container">Content goes here</h1>
     </div>
-    <div class="main-top">
-        <section class="container">
-            <MainLogo/>
-        </section>
+    <div class="background-color">
+      <div class="container">
+        <SectionCard />
+      </div>
+    </div>
+    <div class="main-bottom">
+      <section class="container">
+        <MainLogo />
+      </section>
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-.background-color{
-    background-color: black;
+.hero {
+  background-image: url(../assets/img/jumbotron.jpg);
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-    h1{
-        color: white;
-        padding:30px;
-    }
+.background-color {
+  background-color: #1c1c1c;
+}
+h1 {
+  color: white;
+  padding: 30px;
+}
 
-    .main-top{
-        background-color: #0282f9;
-        .container{
-            display: flex;
-            justify-content: space-between;
-            padding:30px;
-        }
-    }
-
-
+.main-bottom {
+  background-color: #0282f9;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+}
 </style>
