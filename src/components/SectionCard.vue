@@ -95,16 +95,39 @@ export default {
 </script>
 <template>
   <section class="container">
+    <button class="btn-series">CURRENT SERIES</button>
     <div class="box" v-for="card in cards">
       <img :src="card.thumb" alt="" />
       <h5>{{ card.series }}</h5>
     </div>
+    <button class="btn-load">LOAD MORE</button>
   </section>
 </template>
 <style lang="scss" scoped>
 section {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  padding-top: 50px;
+
+  .btn-series {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: #0282f9;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+  }
+  .btn-load {
+    background-color: #0282f9;
+    border: none;
+    color: white;
+    margin: auto;
+    padding: 15px 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
   .box {
     width: 170px;
     height: 170px;
